@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block home_name %}{% endblock %}
+    </title>
+    <style>
+        body{
+            width: 1000px;
+            background-color: lightgrey;
+        }
+
+        .sidebar{
+            margin: 0 10px;
+            float: right;
+        }
+        .content title{
+            margin: 0 10px;
+            float: left;
+
+        }
+        table{
+            border-collapse: collapse;
+
+        }
+        td,th{
+            border: black solid 2px;
+
+        }
+    </style>
+
+    {% block ext_css %}{% endblock %}
+</head>
+<body>
+<div class="title">
+    {% block title %}{% endblock %}
+</div>
+<div class="sidebar">
+    {% block sidebar %}{% endblock %}
+</div>
+
+<div class="content">
+    {% block content %}{% endblock %}
+
+</div>
+
+
+</body>
+</html>

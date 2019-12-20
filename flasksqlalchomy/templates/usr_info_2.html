@@ -1,0 +1,39 @@
+{% extends "base_style.html" %}
+{% block home_name %} student_info {% endblock %}
+{% block title %} 学生成绩表 {% endblock %}
+{% block content %}
+<table>
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>gender</th>
+        <th>chinese</th>
+        <th>math</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for person in info %}
+    <tr>
+        <td>
+            <a href="/change_info?name={{ person.name }}">{{ person.name }}</a>
+        </td>
+        <td>{{ person.gender }}</td>
+        <td>{{ person.chinese }}</td>
+        <td>{{ person.math }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% block sidebar %}
+        <span>成绩排名前三的是</span>
+        <hr>
+        <ol>
+            <li>第一名是：{{ order[0].name }}</li>
+            <li>第二名是：{{ order[1].name }}</li>
+            <li>第三名是：{{ order[2].name }}</li>
+        </ol>
+
+{% endblock %}

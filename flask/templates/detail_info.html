@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename = 'upload/'+ stu.name)}}" width="200px"><br>
+    姓名:<input type="text" name="name" value="{{ stu.name }}"><br>
+    性别:<input type="text" name="gender" value="{{ stu.gender }}"><br>
+    语文成绩:<input type="text" name="gender" value="{{ stu.chinese }}"><br>
+    数学成绩:<input type="text" name="gender" value="{{ stu.math }}">
+    <a href="/"><input type="button" value="返回"></a>
+</body>
+</html>
